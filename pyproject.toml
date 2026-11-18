@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "presentation-pipeline-toolkit"
+version = "0.1.0"
+description = "Reorder a PPTX slide deck while preserving its slide and media parts."
+readme = "README.md"
+license = "MIT"
+license-files = ["LICENSE"]
+requires-python = ">=3.10"
+dependencies = ["lxml>=5.0"]
+
+[project.optional-dependencies]
+demo = ["python-pptx==1.0.2"]
+
+[project.scripts]
+pptx-order = "pptx_order:main"
+
+[tool.setuptools]
+py-modules = ["pptx_order"]
